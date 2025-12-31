@@ -1,0 +1,25 @@
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        def get_f(v):
+            if v=='I':return 1
+            if v=='V':return 5
+            if v=='X':return 10
+            if v=='L':return 50            
+            if v=='C':return 100
+            if v=='D':return 500
+            if v=='M':return 1000
+            return 0
+        ans=0
+        p=0
+        for c in reversed(s):
+            c_v=get_f(c)
+            if c_v <p:
+                ans-=c_v
+            else:
+                ans+=c_v
+            p=c_v
+        return ans
