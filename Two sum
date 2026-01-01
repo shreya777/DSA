@@ -1,0 +1,23 @@
+import array as ar
+def twoSum(self, nums, target):
+    """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+    """
+
+    for i in range(0,self):
+        if(nums[i]+nums[i+1]==target):
+            return nums[i],nums[i+1]
+        return 
+
+print("enter the array elements")
+for j in range():
+    x=int(input())
+    nums.append(x)
+target=int(input("enter the targeted number"))
+list=twoSum(nums,target)
+if list==" ":
+    print("not found")
+else:
+    print("[{list[0]},{list[1]}]")
